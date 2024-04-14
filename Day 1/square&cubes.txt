@@ -1,0 +1,11 @@
+// write a algorithm for check number is odd then print square and number is odd then print cube 
+1. Start
+2. Declare a variable as num
+4. Read num
+4. Check num is 
+   if(num%2 == 0)
+       num = num*num
+    else
+       num = num*num*num                
+5. print num
+6. End
