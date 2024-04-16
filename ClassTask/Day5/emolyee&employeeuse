@@ -1,0 +1,83 @@
+//Employee.java
+package com.employee;
+
+public class Employee {
+	static String company = "wirpo";
+	
+	static int no = 100;
+	
+	static void display() {
+		System.out.println("Company :"+Employee.company);
+	}
+	
+	private int empNo;
+	private String Name;
+	private float Salary;
+	
+	public Employee(String name, float salary) {
+		super();
+		this.empNo = no++;
+		 Name = name;
+		 Salary = salary;
+	}
+	
+	public void showData() {
+		System.out.println(empNo + " : " + Name + " :" + Salary);
+		
+	}
+	
+	public int getEmpNo() {
+		return empNo;
+	}
+	
+	public void setEmpNo(int empNo) {
+		this.empNo = empNo;
+	}
+	
+	public String getName() {
+		return Name;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [empNo=" + empNo + ", Name=" + Name + ", Salary=" + Salary + "]";
+	}
+	
+}
+
+----------------------------------------
+//EmployeeUse.java
+package com.employee;
+
+public class UseEmployee {
+
+	public static void main(String[] args) {  // Varagrs
+		// TODO Auto-generated method stub
+		
+		final double AverageSalary = 98253d;
+		
+		//Array 
+		Employee[] empObjects = new Employee[4];  // array declaration
+		//create & initialize actual employee objects using consts
+		empObjects[0] = new Employee("Shivam",2342f);
+		empObjects[1] = new Employee("shubham",4636f);
+		empObjects[2] = new Employee("vikash",3536f);
+		empObjects[3] = new Employee("Surya",3678f);
+		
+		
+		//display the employee object data
+		System.out.println("Employee Object 1: "+empObjects[0]);
+		System.out.println("Employee Object 2: "+empObjects[1]);
+		System.out.println("Employee Object 3: "+empObjects[2]);
+		System.out.println("Employee Object 4: "+empObjects[3]);
+
+	}
+
+}
+
+-------------------------------------
+Output:-
+Employee Object 1: Employee [empNo=100, Name=Shivam, Salary=2342.0]
+Employee Object 2: Employee [empNo=101, Name=shubham, Salary=4636.0]
+Employee Object 3: Employee [empNo=102, Name=vikash, Salary=3536.0]
+Employee Object 4: Employee [empNo=103, Name=Surya, Salary=3678.0]
