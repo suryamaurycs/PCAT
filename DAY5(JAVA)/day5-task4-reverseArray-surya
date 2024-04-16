@@ -1,0 +1,48 @@
+//Task 4: Arrays - Declaration, Initialization, and Usage
+//Create a program that declares an array of integers, initializes it with 
+//consecutive numbers, and prints the array in reverse order.
+
+package April16Task;
+
+import java.util.Scanner;
+
+public class ReverseArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the length of Array :");
+		int num = sc.nextInt();
+		
+		int[] arr = new int[num];
+		for(int i = 0;i<num;i++) {
+			System.out.println("Enter the "+ (i+1) +" Number :");
+			arr[i] = sc.nextInt();
+		}
+		
+		for(int i = num - 1;i>=0;i--) {
+			System.out.println("The " + (i+1) + " Number is "+arr[i]);
+		}
+
+	}
+
+}
+------------------------------------------------------------------
+  Output:-
+    Enter the length of Array :
+5
+Enter the 1 Number :
+3
+Enter the 2 Number :
+6
+Enter the 3 Number :
+2
+Enter the 4 Number :
+78
+Enter the 5 Number :
+57
+The 5 Number is 57
+The 4 Number is 78
+The 3 Number is 2
+The 2 Number is 6
+The 1 Number is 3
